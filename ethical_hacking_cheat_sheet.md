@@ -48,5 +48,9 @@ Someone should find this useful!
 find **pwd** -type **see below** -name **desired file name** -user *owner of file* -size *see below* -newermt *date: yyyy-mm-dd* -exec ls -al {} \; 2>/dev/null	
 
 **-type** argument: Can either be **d** for directory, or **f** for file
-*-size* argument: Follows this structure - `(+ [greater than] or - [less than])(file size, ends in g (gigabyte), m (megabyte), or k (kilobyte))`
+*-size* argument: Follows this structure:
+`(+ [greater than] or - [less than])(file size, ends in g (gigabyte), m (megabyte), or k (kilobyte))` ex -size +50k OR -size -75m
+
+**EXAMPLE:** `find / -type f -name *.conf -user root -size +20k -newermt 2020-03-03 -exec ls -al {} \; 2>/dev/null`
+
 

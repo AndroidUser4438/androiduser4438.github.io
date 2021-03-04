@@ -52,5 +52,19 @@ find **pwd** -type **see below** -name **desired file name** -user *owner of fil
 `(+ [greater than] or - [less than])(file size, ends in g (gigabyte), m (megabyte), or k (kilobyte))` ex -size +50k OR -size -75m
 
 **EXAMPLE:** `find / -type f -name *.conf -user root -size +20k -newermt 2020-03-03 -exec ls -al {} \; 2>/dev/null`
+    Will find all files from the '/' directory that match the file name `"*.conf"` that are also owned by "root", are larger that 20 kilobytes, newer than 3/3/2020, and will not show any errors
 
 
+
+
+## JavaScript Deobfuscation
+
+### Basic Obfuscation
+
+Basic obfuscation can often look like this:
+```javascript
+eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('7.6("5 4 3 2 1 0!")',8,8,'code|obfuscated|or|unknown|run|Never|log|console'.split('|'),0,{}))
+```
+*The tool used here can be found at [BeautifyTools.com](https://beautifytools.com/javascript-obfuscator.php#)*
+
+__NEVER run obfuscated code without knowing what it does!__
